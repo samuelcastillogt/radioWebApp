@@ -1,5 +1,5 @@
 const CACHE_NAME = 'mi-pwa-cache-v1'
-const urlsToCache = ['/', '/index.html', '/manifest.json', '/favicon.svg']
+const urlsToCache = ['./', './index.html', './manifest.json', './favicon.svg']
 
 self.addEventListener('install', event => {
   event.waitUntil(
