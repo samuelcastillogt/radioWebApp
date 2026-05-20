@@ -12,9 +12,9 @@ type Store = {
 const useStore = create<Store>()((set) => ({
   radios: [],
   radioSelected: null,
-  setRadios: (radios: IradioData[]) => set((state) => ({ radios: radios })),
-  setRadioSelected: (radio: Iradio) => set((state) => ({ radioSelected: radio })),
-    closeRadioSelected: () => set((state) => ({ radioSelected: null }))
+  setRadios: (radios: IradioData[]) => set(() => ({ radios: radios })),
+  setRadioSelected: (radio: Iradio) => set(() => ({ radioSelected: radio })),
+    closeRadioSelected: () => set(() => ({ radioSelected: null }))
 }))
 
 export default useStore

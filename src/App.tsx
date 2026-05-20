@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { Header } from './components/Header/Header'
 import { radiosService } from './services/radios.service'
 import { RadioCard } from './components/radioCard/RadioCard'
-import type { Iradio, IradioData } from './interfaces/radio.interface'
+import type { IradioData } from './interfaces/radio.interface'
 import useStore from './store/states/radios'
 import { Modal } from './components/Modal/Modal'
 function App() {
