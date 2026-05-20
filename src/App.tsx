@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Header } from './components/Header/Header'
 import { radiosService } from './services/radios.service'
-import { RaddioCard } from './components/radioCard/RadioCard'
+import { RadioCard } from './components/radioCard/RadioCard'
+import type { Iradio, IradioData } from './interfaces/radio.interface'
+import useStore from './store/states/radios'
+import { Modal } from './components/Modal/Modal'
 function App() {
-  const [radios, setRadios] = useState([])
+  const {radios, setRadios, radioSelected} = useStore()
   const getRadios = async()=>{
     const radios = await radiosService.getRadios()
     setRadios(radios)
@@ -14,10 +17,16 @@ function App() {
   return (
     <>
 <Header />
-<div>
+<div className='radios-container'>
     {
-      radios.length > 0 && radios.map((radio: any)=> <RaddioCard key={radio.id} radioData={radio.data} />)
+      radios && radios.length > 0 && radios.map((radio: IradioData)=> <RadioCard key={radio.id} radioData={radio.data} />)
     }
+      </div>
+
+      <div>
+        {
+          radioSelected && <Modal />
+        }
       </div>
     </>
   )

@@ -1,0 +1,15 @@
+.radioCard{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border: 1px solid #3B82F6;
+}
+.radioCard :hover{
+    cursor: pointer;
+}
+.radioCard_img img{
+    width: 100%;
+    height: auto;
+}
