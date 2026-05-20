@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
-      const registration = await navigator.serviceWorker.register('/sw.js')
+      const registration = await navigator.serviceWorker.register('./sw.js')
       console.log('Service Worker registrado:', registration)
     } catch (error) {
       console.error('Error al registrar el Service Worker:', error)
