@@ -1,15 +1,32 @@
 .radioCard{
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    color: white;
-    text-align: center;
-    border: 1px solid #3B82F6;
+    height: 100%;
+    padding: 14px;
+    color: var(--text-base);
+    text-align: left;
+    border-radius: var(--radius-card);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)), var(--surface-1);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+    transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 }
-.radioCard :hover{
+
+.radioCard:hover{
     cursor: pointer;
+    transform: translateY(-2px);
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00)), var(--surface-2);
+    box-shadow: var(--shadow-medium);
 }
+
+.radioCard__header h3{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1px;
+    margin-bottom: 10px;
+}
+
 .radioCard_img img{
     width: 100%;
     height: auto;
+    display: block;
+    border-radius: 6px;
 }

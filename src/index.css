@@ -1,17 +1,57 @@
+/* Spotify-inspired design tokens (see DESIGN.md) */
+:root{
+  --bg-0: #121212;
+  --surface-1: #181818;
+  --surface-2: #1f1f1f;
+
+  --text-base: #ffffff;
+  --text-muted: #b3b3b3;
+
+  --accent: #1ed760;
+  --border-muted: #4d4d4d;
+
+  --shadow-medium: rgba(0,0,0,0.3) 0px 8px 8px;
+  --shadow-heavy: rgba(0,0,0,0.5) 0px 8px 24px;
+
+  --radius-card: 8px;
+  --radius-pill: 9999px;
+
+  --container: 1100px;
+  --gap: 16px;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
 *{
   margin: 0;
-  padding: 0
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
 }
 
 body{
-  background-color: #0F172A;
-  color: #A855F7;
-    font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+  background: radial-gradient(900px 600px at 20% 0%, rgba(30,215,96,0.10), transparent 60%),
+              radial-gradient(700px 500px at 90% 10%, rgba(255,255,255,0.06), transparent 55%),
+              var(--bg-0);
+  color: var(--text-base);
+  font-family: SpotifyMixUI, CircularSp, "Helvetica Neue", Helvetica, Arial, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+#root{
+  min-height: 100%;
+}
+
 .radios-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  width: min(var(--container), calc(100% - 32px));
+  margin: 18px auto 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--gap);
+  align-content: start;
 }

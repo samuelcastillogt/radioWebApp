@@ -10,7 +10,7 @@ export const RadioCard = (radioData:{radioData: Iradio}) =>{
                 <h3>{radioData.radioData.nombre}</h3>
             </div>
             <div className='radioCard_img'>
-                <img src={radioData.radioData.imagen} alt="" />
+                <img src={radioData.radioData.imagen} alt=""/>
             </div>
         </div>
     )

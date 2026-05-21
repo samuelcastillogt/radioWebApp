@@ -1,3 +1,22 @@
 .header{
-    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 14px 16px;
+    background: rgba(18,18,18,0.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.header h2{
+    width: min(1100px, calc(100% - 0px));
+    margin: 0 auto;
+    font-family: SpotifyMixUITitle, SpotifyMixUI, CircularSp, "Helvetica Neue", Helvetica, Arial, system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.header h2::selection{
+    background: rgba(30,215,96,0.25);
 }

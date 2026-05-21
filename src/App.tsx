@@ -7,13 +7,12 @@ import useStore from './store/states/radios'
 import { Modal } from './components/Modal/Modal'
 function App() {
   const {radios, setRadios, radioSelected} = useStore()
-  const getRadios = async()=>{
-    const radios = await radiosService.getRadios()
-    setRadios(radios)
-  }
   useEffect(()=>{
-    getRadios()
-  }, [])
+    ;(async()=>{
+      const radios = await radiosService.getRadios()
+      setRadios(radios)
+    })()
+  }, [setRadios])
   return (
     <>
 <Header />
