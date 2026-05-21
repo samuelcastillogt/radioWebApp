@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mi-pwa-cache-v1'
+const CACHE_NAME = 'mi-pwa-cache-v2'
 const urlsToCache = ['./', './index.html', './manifest.json', './favicon.svg']
 
 self.addEventListener('install', event => {
@@ -38,7 +38,7 @@ self.addEventListener('fetch', event => {
           caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseToCache))
           return response
         })
-        .catch(() => caches.match('/'))
+        .catch(() => caches.match('./'))
     }),
   )
 })
