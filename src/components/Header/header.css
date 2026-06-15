@@ -1,22 +1,73 @@
-.header{
+.header {
     position: sticky;
     top: 0;
-    z-index: 10;
-    padding: 14px 16px;
-    background: rgba(18,18,18,0.86);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    z-index: 100;
+    padding: 18px 16px;
+    background: rgba(15, 27, 45, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
 }
 
-.header h2{
-    width: min(1100px, calc(100% - 0px));
+.header__container {
+    width: min(var(--container), calc(100% - 0px));
     margin: 0 auto;
-    font-family: SpotifyMixUITitle, SpotifyMixUI, CircularSp, "Helvetica Neue", Helvetica, Arial, system-ui, -apple-system, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header h2::selection{
-    background: rgba(30,215,96,0.25);
+.header__branding {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.header__logo h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(135deg, #0047ff, #00a878);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header__subtitle {
+    font-size: 12px;
+    color: var(--text-light);
+    margin: 0;
+    margin-left: 38px;
+}
+
+.header__nav {
+    display: flex;
+    gap: 16px;
+}
+
+.header__nav button {
+    padding: 8px 16px;
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.header__nav button:hover {
+    background: rgba(0, 71, 255, 0.1);
+    color: var(--text-base);
+    border-color: var(--accent);
 }
